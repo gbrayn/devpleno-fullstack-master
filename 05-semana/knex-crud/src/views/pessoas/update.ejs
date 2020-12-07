@@ -1,0 +1,43 @@
+<%- include('../components/header.ejs') %>
+<h1>
+  Pessoas
+  <a href="/" class="btn btn-primary">◀️ Retornar para Home</a>
+</h1>
+<form method="POST">
+  <div class="form-group">
+    <label for="nome">Nome *</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nome"
+      name="nome"
+      value="<%= pessoa.nome %>"
+      aria-describedby="emailHelp"
+      placeholder="Enter your full name"
+    />
+  </div>
+  <div class="form-group">
+    <label for="nascimento">Data de nascimento *</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nascimento"
+      name="nascimento"
+      value="<%= pessoa.nascimento %>"
+      placeholder="YYYY/mm/dd"
+    />
+  </div>
+  <div class="form-group">
+    <label for="cargo">Cargo *</label>
+    <input
+      type="text"
+      class="form-control"
+      id="cargo"
+      name="cargo"
+      value="<%= pessoa.cargo %>"
+      placeholder="Enter your job title"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Alterar</button>
+</form>
+<%- include('../components/footer.ejs') %>

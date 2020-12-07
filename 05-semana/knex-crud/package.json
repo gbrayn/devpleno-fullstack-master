@@ -1,0 +1,35 @@
+{
+  "name": "knex-crud",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Gustavo Brayn <gustavo.augusto.brayn@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "commit": "git-cz"
+  },
+  "dependencies": {
+    "commitizen": "^4.0.3",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "knex": "^0.20.8",
+    "mysql2": "^2.1.0"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "3.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^2.0.2",
+    "sucrase": "^3.12.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

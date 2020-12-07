@@ -1,0 +1,31 @@
+<%- include ('../header') %>
+<h2 id="open-roles">
+  Nova vaga:
+  <a href="/admin/vagas">Vagas</a>
+</h2>
+<div class="container">
+  <form method="POST">
+    <div class="form-group">
+      <label>Titulo vaga:</label>
+      <input class="form-control" type="text" name="titulo" id="">
+    </div>
+    
+    <div class="form-group">
+      <label>Descricao vaga:</label>
+      <textarea class="form-control" name="descricao" id="" cols="30" rows="10"></textarea>
+     </div>
+     <div class="form-group">
+       <label>Categoria vaga:</label>
+       <select class="form-control" name="categoria">
+         <option>Selecione</option>
+          <% categorias.forEach(categoria => { %> 
+            <option value="<%= categoria.id %>"><%= categoria.categoria %></option>
+          <% }) %>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Salvar vaga</button>
+
+  </form>
+</div>
+<%- include('../footer') %>
+</html>

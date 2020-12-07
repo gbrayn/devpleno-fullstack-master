@@ -1,0 +1,18 @@
+<%- include('../components/header') %>
+<body>
+  <div class="container">
+    <form method="GET" action="/cotacao" class="pure-form">
+      <input id="cotacao" name="cotacao" type="text" value="<%=cotacao %>" />
+      <input
+        id="quant"
+        name="quantidade"
+        type="text"
+        placeholder="Quantidade de dólares"
+      />
+      <button id="calc" class="pure-button pure-button-primary">
+        Converter!
+      </button>
+    </form>
+    <%- include('../components/footer.ejs') %>
+  </div>
+</body>

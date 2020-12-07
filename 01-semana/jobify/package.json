@@ -1,0 +1,21 @@
+{
+  "name": "jobify",
+  "version": "1.0.0",
+  "description": "A simple board for jobs.",
+  "main": "src/index.js",
+  "author": "Gustavo Brayn",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon ./src/index.js"
+  },
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "sqlite": "^3.0.3",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "sucrase": "^3.10.1"
+  }
+}

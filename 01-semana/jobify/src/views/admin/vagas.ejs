@@ -1,0 +1,20 @@
+<%- include ('../header') %>
+<h2 id="open-roles">
+  Admin vagas:
+  <a href="/admin/vagas/nova">Nova vaga</a>
+</h2>
+<div>
+  <ul class="list-group">
+    <% vagas.forEach(vaga => { %>
+      <li class="list-group-item">
+        <%- vaga.titulo %>
+        <div class="buttons">
+          <a href="/admin/vagas/delete/<%= vaga.id %>" class="btn btn-danger">Excluir</a>
+          <a href="/admin/vagas/editar/<%= vaga.id %>" class="btn btn-primary">Editar</a>
+        </div> 
+      </li>
+    <%})%>
+  </ul>
+</div>
+<%- include('../footer') %>
+</html>

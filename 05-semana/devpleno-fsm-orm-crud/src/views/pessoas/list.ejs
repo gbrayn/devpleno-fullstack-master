@@ -1,0 +1,35 @@
+<%- include ('../components/header.ejs') %>
+<div class="container">
+  <h1>Lista de pessoas</h1>
+  <a href="/pessoas/create">Criar uma nova pessoa</a>
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Cargo</th>
+        <th scope="col">Nascimento</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% pessoas.map(pessoa => { %>
+      <tr>
+        <th scope="row"><%- pessoa.id %></th>
+        <td><%- pessoa.nome %></td>
+        <td><%- pessoa.cargo %></td>
+        <td><%- pessoa.nascimento %></td>
+        <td>
+          <div class="btn-group" role="group">
+            <a href="/pessoas/update/<%- pessoa.id %>" class="btn btn-primary"
+              >Editar</a
+            >
+            <a href="/pessoas/delete" class="btn btn-danger">Excluir</a>
+          </div>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+<% include ('../components/footer.ejs') %>

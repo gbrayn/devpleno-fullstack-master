@@ -1,0 +1,40 @@
+<%- include ('../components/header.ejs') %>
+<div class="container">
+  <h1>Nova pessoa</h1>
+  <p><a href="/pessoas">Voltar para lista de pessoas</a></p>
+
+  <form method="post">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input
+        class="form-control"
+        type="text"
+        name="nome"
+        id="nome"
+        placeholder="Digite seu nome"
+      />
+    </div>
+    <div class="form-group">
+      <label for="cargo">Cargo</label>
+      <input
+        class="form-control"
+        type="text"
+        name="cargo"
+        id="cargo"
+        placeholder="Digite seu cargo"
+      />
+    </div>
+    <div class="form-group">
+      <label for="cargo">Nascimento</label>
+      <input
+        class="form-control"
+        type="text"
+        name="nascimento"
+        id="nascimento"
+        placeholder="Digite sua data de nascimento"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+  </form>
+</div>
+<% include ('../components/footer.ejs') %>

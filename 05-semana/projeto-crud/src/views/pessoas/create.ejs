@@ -1,0 +1,45 @@
+<%- include('../components/header') %>
+<div class="container">
+  <h1>
+    Nova Pessoa
+  </h1>
+  <p>
+    <a type="button" class="btn btn-primary" href="/pessoas/">
+      🔙 Voltar
+    </a>
+  </p>
+  <form method="POST">
+    <div class="form-group">
+      <label for="nome">Nome Completo *</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        name="nome"
+        aria-describedby="nome"
+      />
+    </div>
+    <div class="form-group">
+      <label for="nascimento">Nascimento *</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nascimento"
+        name="nascimento"
+        aria-describedby="nascimento"
+      />
+    </div>
+    <div class="form-group">
+      <label for="cargo">Cargo *</label>
+      <input
+        type="text"
+        class="form-control"
+        id="cargo"
+        name="cargo"
+        aria-describedby="cargo"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+  </form>
+</div>
+<%- include ('../components/footer') %>

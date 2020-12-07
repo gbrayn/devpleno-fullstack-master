@@ -1,0 +1,43 @@
+<%- include ('../components/header.ejs') %>
+<div class="container">
+  <h1>
+    Pessoas
+  </h1>
+  <p>
+    <a type="button" class="btn btn-success" href="/pessoas/create">
+      ➕ Adicionar pessoa
+    </a>
+  </p>
+  <table class="table table-striped table-hover table-bordered">
+    <tr>
+      <th>Nome</th>
+      <th>Cargo</th>
+      <th>Ações</th>
+    </tr>
+    <% pessoas.map(pessoa => {%>
+    <tr>
+      <td><%= pessoa.nome %></td>
+      <td><%= pessoa.cargo %></td>
+      <td>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <a
+            type="button"
+            class="btn btn-primary"
+            href="/pessoas/update/<%= pessoa.id%>"
+            >Editar</a
+          >
+          <a
+            type="button"
+            class="btn btn-danger"
+            href="/pessoas/delete/<%= pessoa.id%>"
+            onclick="return confirm('Deseja realmente excluir?')"
+            >Excluir</a
+          >
+        </div>
+      </td>
+    </tr>
+    <% }) %>
+  </table>
+</div>
+
+<%- include('../components/footer.ejs') %>

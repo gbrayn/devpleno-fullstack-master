@@ -1,0 +1,13 @@
+<%- include('../components/header') %>
+<body>
+  <div class="container">
+    <% if (error) { %>
+    <p><%= error %></p>
+    <% } else { %>
+    <p>
+      Valor do dolar é U$ <%= cotacao %>, U$ <%= quantidade %> dólares em reais
+      são R$ <%=conversao %>
+    </p>
+    <% } %> <%- include('../components/footer.ejs') %>
+  </div>
+</body>
